@@ -1,0 +1,1 @@
+/usr/bin/g++ -g -Wl,--dependency-file=CMakeFiles/socket_utils_test.dir/link.d CMakeFiles/socket_utils_test.dir/src/socket_utils.cpp.o CMakeFiles/socket_utils_test.dir/tests/socket_utils_test.cpp.o -o socket_utils_test

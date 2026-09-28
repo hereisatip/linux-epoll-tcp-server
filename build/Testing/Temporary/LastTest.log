@@ -1,0 +1,124 @@
+Start testing: Sep 28 14:43 CST
+----------------------------------------------------------
+1/6 Testing: protocol_test
+1/6 Test: protocol_test
+Command: "/home/curry/linux-learning/epoll_server_rewrite/build/protocol_test"
+Directory: /home/curry/linux-learning/epoll_server_rewrite/build
+"protocol_test" start time: Sep 28 14:43 CST
+Output:
+----------------------------------------------------------
+PING is pass!
+Hello is pass!
+hello world is pass!
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"protocol_test" end time: Sep 28 14:43 CST
+"protocol_test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/6 Testing: connection_manager_test
+2/6 Test: connection_manager_test
+Command: "/home/curry/linux-learning/epoll_server_rewrite/build/connection_manager_test"
+Directory: /home/curry/linux-learning/epoll_server_rewrite/build
+"connection_manager_test" start time: Sep 28 14:43 CST
+Output:
+----------------------------------------------------------
+YES
+YES
+YES
+YES
+YES
+YES
+YES
+YES
+YES
+YES
+YES
+YES
+YES
+YES
+YES
+YES
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"connection_manager_test" end time: Sep 28 14:43 CST
+"connection_manager_test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/6 Testing: thread_pool_test
+3/6 Test: thread_pool_test
+Command: "/home/curry/linux-learning/epoll_server_rewrite/build/thread_pool_test"
+Directory: /home/curry/linux-learning/epoll_server_rewrite/build
+"thread_pool_test" start time: Sep 28 14:43 CST
+Output:
+----------------------------------------------------------
+all work is pass
+<end of output>
+Test time =   0.05 sec
+----------------------------------------------------------
+Test Passed.
+"thread_pool_test" end time: Sep 28 14:43 CST
+"thread_pool_test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/6 Testing: socket_utils_test
+4/6 Test: socket_utils_test
+Command: "/home/curry/linux-learning/epoll_server_rewrite/build/socket_utils_test"
+Directory: /home/curry/linux-learning/epoll_server_rewrite/build
+"socket_utils_test" start time: Sep 28 14:43 CST
+Output:
+----------------------------------------------------------
+YES
+YES
+YES
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"socket_utils_test" end time: Sep 28 14:43 CST
+"socket_utils_test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/6 Testing: listen_socket_test
+5/6 Test: listen_socket_test
+Command: "/home/curry/linux-learning/epoll_server_rewrite/build/listen_socket_test"
+Directory: /home/curry/linux-learning/epoll_server_rewrite/build
+"listen_socket_test" start time: Sep 28 14:43 CST
+Output:
+----------------------------------------------------------
+创建端口成功
+非阻塞设置成功
+获取fd成功
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"listen_socket_test" end time: Sep 28 14:43 CST
+"listen_socket_test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/6 Testing: epoll_utils_test
+6/6 Test: epoll_utils_test
+Command: "/home/curry/linux-learning/epoll_server_rewrite/build/epoll_utils_test"
+Directory: /home/curry/linux-learning/epoll_server_rewrite/build
+"epoll_utils_test" start time: Sep 28 14:43 CST
+Output:
+----------------------------------------------------------
+YES
+YES
+YES
+YES
+YES
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"epoll_utils_test" end time: Sep 28 14:43 CST
+"epoll_utils_test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Sep 28 14:43 CST

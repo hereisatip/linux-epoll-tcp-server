@@ -1,0 +1,140 @@
+[
+{
+  "directory": "/home/curry/linux-learning/epoll_server_rewrite/build",
+  "command": "/usr/bin/g++  -I/home/curry/linux-learning/epoll_server_rewrite/include -g -std=c++17 -Wall -Wextra -Wpedantic -o CMakeFiles/epoll_server.dir/src/main.cpp.o -c /home/curry/linux-learning/epoll_server_rewrite/src/main.cpp",
+  "file": "/home/curry/linux-learning/epoll_server_rewrite/src/main.cpp",
+  "output": "CMakeFiles/epoll_server.dir/src/main.cpp.o"
+},
+{
+  "directory": "/home/curry/linux-learning/epoll_server_rewrite/build",
+  "command": "/usr/bin/g++  -I/home/curry/linux-learning/epoll_server_rewrite/include -g -std=c++17 -Wall -Wextra -Wpedantic -o CMakeFiles/epoll_server.dir/src/server.cpp.o -c /home/curry/linux-learning/epoll_server_rewrite/src/server.cpp",
+  "file": "/home/curry/linux-learning/epoll_server_rewrite/src/server.cpp",
+  "output": "CMakeFiles/epoll_server.dir/src/server.cpp.o"
+},
+{
+  "directory": "/home/curry/linux-learning/epoll_server_rewrite/build",
+  "command": "/usr/bin/g++  -I/home/curry/linux-learning/epoll_server_rewrite/include -g -std=c++17 -Wall -Wextra -Wpedantic -o CMakeFiles/epoll_server.dir/src/socket_utils.cpp.o -c /home/curry/linux-learning/epoll_server_rewrite/src/socket_utils.cpp",
+  "file": "/home/curry/linux-learning/epoll_server_rewrite/src/socket_utils.cpp",
+  "output": "CMakeFiles/epoll_server.dir/src/socket_utils.cpp.o"
+},
+{
+  "directory": "/home/curry/linux-learning/epoll_server_rewrite/build",
+  "command": "/usr/bin/g++  -I/home/curry/linux-learning/epoll_server_rewrite/include -g -std=c++17 -Wall -Wextra -Wpedantic -o CMakeFiles/epoll_server.dir/src/listen_socket.cpp.o -c /home/curry/linux-learning/epoll_server_rewrite/src/listen_socket.cpp",
+  "file": "/home/curry/linux-learning/epoll_server_rewrite/src/listen_socket.cpp",
+  "output": "CMakeFiles/epoll_server.dir/src/listen_socket.cpp.o"
+},
+{
+  "directory": "/home/curry/linux-learning/epoll_server_rewrite/build",
+  "command": "/usr/bin/g++  -I/home/curry/linux-learning/epoll_server_rewrite/include -g -std=c++17 -Wall -Wextra -Wpedantic -o CMakeFiles/epoll_server.dir/src/epoll_utils.cpp.o -c /home/curry/linux-learning/epoll_server_rewrite/src/epoll_utils.cpp",
+  "file": "/home/curry/linux-learning/epoll_server_rewrite/src/epoll_utils.cpp",
+  "output": "CMakeFiles/epoll_server.dir/src/epoll_utils.cpp.o"
+},
+{
+  "directory": "/home/curry/linux-learning/epoll_server_rewrite/build",
+  "command": "/usr/bin/g++  -I/home/curry/linux-learning/epoll_server_rewrite/include -g -std=c++17 -Wall -Wextra -Wpedantic -o CMakeFiles/epoll_server.dir/src/connection_manager.cpp.o -c /home/curry/linux-learning/epoll_server_rewrite/src/connection_manager.cpp",
+  "file": "/home/curry/linux-learning/epoll_server_rewrite/src/connection_manager.cpp",
+  "output": "CMakeFiles/epoll_server.dir/src/connection_manager.cpp.o"
+},
+{
+  "directory": "/home/curry/linux-learning/epoll_server_rewrite/build",
+  "command": "/usr/bin/g++  -I/home/curry/linux-learning/epoll_server_rewrite/include -g -std=c++17 -Wall -Wextra -Wpedantic -o CMakeFiles/epoll_server.dir/src/protocol.cpp.o -c /home/curry/linux-learning/epoll_server_rewrite/src/protocol.cpp",
+  "file": "/home/curry/linux-learning/epoll_server_rewrite/src/protocol.cpp",
+  "output": "CMakeFiles/epoll_server.dir/src/protocol.cpp.o"
+},
+{
+  "directory": "/home/curry/linux-learning/epoll_server_rewrite/build",
+  "command": "/usr/bin/g++  -I/home/curry/linux-learning/epoll_server_rewrite/include -g -std=c++17 -Wall -Wextra -Wpedantic -o CMakeFiles/epoll_server.dir/src/thread_pool.cpp.o -c /home/curry/linux-learning/epoll_server_rewrite/src/thread_pool.cpp",
+  "file": "/home/curry/linux-learning/epoll_server_rewrite/src/thread_pool.cpp",
+  "output": "CMakeFiles/epoll_server.dir/src/thread_pool.cpp.o"
+},
+{
+  "directory": "/home/curry/linux-learning/epoll_server_rewrite/build",
+  "command": "/usr/bin/g++  -I/home/curry/linux-learning/epoll_server_rewrite/include -g -std=c++17 -Wall -Wextra -Wpedantic -o CMakeFiles/protocol_test.dir/src/protocol.cpp.o -c /home/curry/linux-learning/epoll_server_rewrite/src/protocol.cpp",
+  "file": "/home/curry/linux-learning/epoll_server_rewrite/src/protocol.cpp",
+  "output": "CMakeFiles/protocol_test.dir/src/protocol.cpp.o"
+},
+{
+  "directory": "/home/curry/linux-learning/epoll_server_rewrite/build",
+  "command": "/usr/bin/g++  -I/home/curry/linux-learning/epoll_server_rewrite/include -g -std=c++17 -Wall -Wextra -Wpedantic -o CMakeFiles/protocol_test.dir/tests/protocol_test.cpp.o -c /home/curry/linux-learning/epoll_server_rewrite/tests/protocol_test.cpp",
+  "file": "/home/curry/linux-learning/epoll_server_rewrite/tests/protocol_test.cpp",
+  "output": "CMakeFiles/protocol_test.dir/tests/protocol_test.cpp.o"
+},
+{
+  "directory": "/home/curry/linux-learning/epoll_server_rewrite/build",
+  "command": "/usr/bin/g++  -I/home/curry/linux-learning/epoll_server_rewrite/include -g -std=c++17 -Wall -Wextra -Wpedantic -o CMakeFiles/connection_manager_test.dir/src/connection_manager.cpp.o -c /home/curry/linux-learning/epoll_server_rewrite/src/connection_manager.cpp",
+  "file": "/home/curry/linux-learning/epoll_server_rewrite/src/connection_manager.cpp",
+  "output": "CMakeFiles/connection_manager_test.dir/src/connection_manager.cpp.o"
+},
+{
+  "directory": "/home/curry/linux-learning/epoll_server_rewrite/build",
+  "command": "/usr/bin/g++  -I/home/curry/linux-learning/epoll_server_rewrite/include -g -std=c++17 -Wall -Wextra -Wpedantic -o CMakeFiles/connection_manager_test.dir/tests/connection_manager_test.cpp.o -c /home/curry/linux-learning/epoll_server_rewrite/tests/connection_manager_test.cpp",
+  "file": "/home/curry/linux-learning/epoll_server_rewrite/tests/connection_manager_test.cpp",
+  "output": "CMakeFiles/connection_manager_test.dir/tests/connection_manager_test.cpp.o"
+},
+{
+  "directory": "/home/curry/linux-learning/epoll_server_rewrite/build",
+  "command": "/usr/bin/g++  -I/home/curry/linux-learning/epoll_server_rewrite/include -g -std=c++17 -Wall -Wextra -Wpedantic -o CMakeFiles/thread_pool_test.dir/src/thread_pool.cpp.o -c /home/curry/linux-learning/epoll_server_rewrite/src/thread_pool.cpp",
+  "file": "/home/curry/linux-learning/epoll_server_rewrite/src/thread_pool.cpp",
+  "output": "CMakeFiles/thread_pool_test.dir/src/thread_pool.cpp.o"
+},
+{
+  "directory": "/home/curry/linux-learning/epoll_server_rewrite/build",
+  "command": "/usr/bin/g++  -I/home/curry/linux-learning/epoll_server_rewrite/include -g -std=c++17 -Wall -Wextra -Wpedantic -o CMakeFiles/thread_pool_test.dir/tests/thread_pool_test.cpp.o -c /home/curry/linux-learning/epoll_server_rewrite/tests/thread_pool_test.cpp",
+  "file": "/home/curry/linux-learning/epoll_server_rewrite/tests/thread_pool_test.cpp",
+  "output": "CMakeFiles/thread_pool_test.dir/tests/thread_pool_test.cpp.o"
+},
+{
+  "directory": "/home/curry/linux-learning/epoll_server_rewrite/build",
+  "command": "/usr/bin/g++  -I/home/curry/linux-learning/epoll_server_rewrite/include -g -std=c++17 -Wall -Wextra -Wpedantic -o CMakeFiles/socket_utils_test.dir/src/socket_utils.cpp.o -c /home/curry/linux-learning/epoll_server_rewrite/src/socket_utils.cpp",
+  "file": "/home/curry/linux-learning/epoll_server_rewrite/src/socket_utils.cpp",
+  "output": "CMakeFiles/socket_utils_test.dir/src/socket_utils.cpp.o"
+},
+{
+  "directory": "/home/curry/linux-learning/epoll_server_rewrite/build",
+  "command": "/usr/bin/g++  -I/home/curry/linux-learning/epoll_server_rewrite/include -g -std=c++17 -Wall -Wextra -Wpedantic -o CMakeFiles/socket_utils_test.dir/tests/socket_utils_test.cpp.o -c /home/curry/linux-learning/epoll_server_rewrite/tests/socket_utils_test.cpp",
+  "file": "/home/curry/linux-learning/epoll_server_rewrite/tests/socket_utils_test.cpp",
+  "output": "CMakeFiles/socket_utils_test.dir/tests/socket_utils_test.cpp.o"
+},
+{
+  "directory": "/home/curry/linux-learning/epoll_server_rewrite/build",
+  "command": "/usr/bin/g++  -I/home/curry/linux-learning/epoll_server_rewrite/include -g -std=c++17 -Wall -Wextra -Wpedantic -o CMakeFiles/listen_socket_test.dir/src/socket_utils.cpp.o -c /home/curry/linux-learning/epoll_server_rewrite/src/socket_utils.cpp",
+  "file": "/home/curry/linux-learning/epoll_server_rewrite/src/socket_utils.cpp",
+  "output": "CMakeFiles/listen_socket_test.dir/src/socket_utils.cpp.o"
+},
+{
+  "directory": "/home/curry/linux-learning/epoll_server_rewrite/build",
+  "command": "/usr/bin/g++  -I/home/curry/linux-learning/epoll_server_rewrite/include -g -std=c++17 -Wall -Wextra -Wpedantic -o CMakeFiles/listen_socket_test.dir/src/listen_socket.cpp.o -c /home/curry/linux-learning/epoll_server_rewrite/src/listen_socket.cpp",
+  "file": "/home/curry/linux-learning/epoll_server_rewrite/src/listen_socket.cpp",
+  "output": "CMakeFiles/listen_socket_test.dir/src/listen_socket.cpp.o"
+},
+{
+  "directory": "/home/curry/linux-learning/epoll_server_rewrite/build",
+  "command": "/usr/bin/g++  -I/home/curry/linux-learning/epoll_server_rewrite/include -g -std=c++17 -Wall -Wextra -Wpedantic -o CMakeFiles/listen_socket_test.dir/tests/listen_socket_test.cpp.o -c /home/curry/linux-learning/epoll_server_rewrite/tests/listen_socket_test.cpp",
+  "file": "/home/curry/linux-learning/epoll_server_rewrite/tests/listen_socket_test.cpp",
+  "output": "CMakeFiles/listen_socket_test.dir/tests/listen_socket_test.cpp.o"
+},
+{
+  "directory": "/home/curry/linux-learning/epoll_server_rewrite/build",
+  "command": "/usr/bin/g++  -I/home/curry/linux-learning/epoll_server_rewrite/include -g -std=c++17 -Wall -Wextra -Wpedantic -o CMakeFiles/epoll_utils_test.dir/src/epoll_utils.cpp.o -c /home/curry/linux-learning/epoll_server_rewrite/src/epoll_utils.cpp",
+  "file": "/home/curry/linux-learning/epoll_server_rewrite/src/epoll_utils.cpp",
+  "output": "CMakeFiles/epoll_utils_test.dir/src/epoll_utils.cpp.o"
+},
+{
+  "directory": "/home/curry/linux-learning/epoll_server_rewrite/build",
+  "command": "/usr/bin/g++  -I/home/curry/linux-learning/epoll_server_rewrite/include -g -std=c++17 -Wall -Wextra -Wpedantic -o CMakeFiles/epoll_utils_test.dir/src/socket_utils.cpp.o -c /home/curry/linux-learning/epoll_server_rewrite/src/socket_utils.cpp",
+  "file": "/home/curry/linux-learning/epoll_server_rewrite/src/socket_utils.cpp",
+  "output": "CMakeFiles/epoll_utils_test.dir/src/socket_utils.cpp.o"
+},
+{
+  "directory": "/home/curry/linux-learning/epoll_server_rewrite/build",
+  "command": "/usr/bin/g++  -I/home/curry/linux-learning/epoll_server_rewrite/include -g -std=c++17 -Wall -Wextra -Wpedantic -o CMakeFiles/epoll_utils_test.dir/src/listen_socket.cpp.o -c /home/curry/linux-learning/epoll_server_rewrite/src/listen_socket.cpp",
+  "file": "/home/curry/linux-learning/epoll_server_rewrite/src/listen_socket.cpp",
+  "output": "CMakeFiles/epoll_utils_test.dir/src/listen_socket.cpp.o"
+},
+{
+  "directory": "/home/curry/linux-learning/epoll_server_rewrite/build",
+  "command": "/usr/bin/g++  -I/home/curry/linux-learning/epoll_server_rewrite/include -g -std=c++17 -Wall -Wextra -Wpedantic -o CMakeFiles/epoll_utils_test.dir/tests/epoll_utils_test.cpp.o -c /home/curry/linux-learning/epoll_server_rewrite/tests/epoll_utils_test.cpp",
+  "file": "/home/curry/linux-learning/epoll_server_rewrite/tests/epoll_utils_test.cpp",
+  "output": "CMakeFiles/epoll_utils_test.dir/tests/epoll_utils_test.cpp.o"
+}
+]

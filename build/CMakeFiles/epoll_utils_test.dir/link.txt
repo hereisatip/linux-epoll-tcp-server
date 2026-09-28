@@ -1,0 +1,1 @@
+/usr/bin/g++ -g -Wl,--dependency-file=CMakeFiles/epoll_utils_test.dir/link.d CMakeFiles/epoll_utils_test.dir/src/epoll_utils.cpp.o CMakeFiles/epoll_utils_test.dir/src/socket_utils.cpp.o CMakeFiles/epoll_utils_test.dir/src/listen_socket.cpp.o CMakeFiles/epoll_utils_test.dir/tests/epoll_utils_test.cpp.o -o epoll_utils_test
