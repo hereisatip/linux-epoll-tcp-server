@@ -25,7 +25,6 @@
 #include<termios.h>
 
 #include<sys/eventfd.h>
-#include<unistd.h>
 
 #include<thread>
 
@@ -45,7 +44,7 @@ void handle_signal(int signal_number)
 
 Server::Server(short _port,size_t worker_count):port(_port),thread_pool(worker_count,64)
 {
-    initialize();
+
 }
 
 Server::~Server()
@@ -53,18 +52,34 @@ Server::~Server()
     cleanup();
 }
 
-void Server::initialize()
+bool Server::initialize()
 {
     listen_fd=create_listen_socket(port);
 
+    if(listen_fd==-1)
+    {
+        return false;
+    }
+
     epoll_fd=create_epoll();
+
+    if (epoll_fd == -1)
+    {
+        close(listen_fd);
+        listen_fd = -1;
+        return false;
+    }
 
     result_event_fd=eventfd(0,EFD_NONBLOCK|EFD_CLOEXEC);
 
     if(result_event_fd==-1)
     {
+        close(epoll_fd);
+        close(listen_fd);
+        epoll_fd = -1;
+        listen_fd = -1;
         cerr << "eventfd failed: " << strerror(errno) << '\n';
-        return;
+        return false;
     }
 
     epoll_event result_event{};
@@ -76,7 +91,7 @@ void Server::initialize()
     if (epoll_ctl(epoll_fd, EPOLL_CTL_ADD, result_event_fd, &result_event) == -1)
     {
         cerr << "epoll_ctl add result event failed: " <<strerror(errno) << '\n';
-        return;
+        return false;
     }
 
 
@@ -85,9 +100,14 @@ void Server::initialize()
         perror("epoll_ctl_add");
         close_client(epoll_fd);
         close_client(listen_fd);
+        epoll_fd=-1;
+        listen_fd=-1;
+        return false;
     }
     signal(SIGINT,handle_signal);
     signal(SIGTERM,handle_signal);
+
+    return true;
 }
 
 void Server::accept_clients()
@@ -114,6 +134,13 @@ void Server::accept_clients()
             break;
         }
 
+        if(!set_nonblocking(client_fd))
+        {
+            cerr<<"nonblock fail"<<strerror(errno)<<endl;
+            close_client(client_fd);
+            continue;
+        }
+
         if(!connections.add(client_fd))
         {
             cerr<<"connections.add fail"<<strerror(errno)<<endl;
@@ -121,12 +148,7 @@ void Server::accept_clients()
             continue;
         }
 
-        if(!set_nonblocking(client_fd))
-        {
-            cerr<<"nonblock fail"<<strerror(errno)<<endl;
-            close_client(client_fd);
-            continue;
-        }
+        
         if(!add_epoll_fd(epoll_fd,client_fd,EPOLLIN | EPOLLET | EPOLLRDHUP))
         {
             cerr<<"add_epoll_event fail"<<strerror(errno)<<endl;
@@ -135,9 +157,7 @@ void Server::accept_clients()
         }
 
         cout<<"client accept,fd= "<<client_fd<<endl;
-        break;
     }
-    
 
 }
 
@@ -150,6 +170,16 @@ void Server::run(size_t timeout_ms)
     {
         //有几个fd就绪
     int count=epoll_wait(epoll_fd,events,max_event,timeout_ms);
+
+    if (count == -1)
+    {
+        if (errno == EINTR)
+        {
+            continue;
+        }
+        std::cerr<< "epoll_wait failed: "<< std::strerror(errno)<< '\n';
+        break;
+    }
 
     for(int i=0;i<count;i++)
         {
@@ -229,7 +259,7 @@ void Server::process_complete_results()
         ClientSession* client=connections.find(result.client_fd);
         if(client==nullptr)
         {
-            return;
+            continue;
         }
 
         if(client->connection_id!=result.connection_id)
@@ -293,11 +323,17 @@ void Server::close_client(int fd)
         return;
     }
 
-    if(!remove_epoll_fd(epoll_fd,listen_fd))
+    if(epoll_fd!=-1)
     {
-        cerr<<"remove epoll fail"<<strerror(errno)<<endl;
+        if(!remove_epoll_fd(epoll_fd,fd))
+        {
+            cerr<<"remove epoll fail"<<strerror(errno)<<endl;
+        }
     }
+    
+
     close(fd);
+
     if(!connections.remove(fd))
     {
         cerr<<"remove "<<fd<<" fail"<<strerror(errno)<<endl;
@@ -370,8 +406,6 @@ void Server::handle_read(int client_fd)
                 return;
             }
 
-
-
             while(true)
             {
                 size_t message_end=client->input_buffer.find('\n');
@@ -387,7 +421,7 @@ void Server::handle_read(int client_fd)
 
                 if(message.empty())
                 {
-                    break;
+                    continue;
                 }
 
                 cout<<"receive from fd= "<<client_fd<<": "<<message<<endl;
@@ -561,7 +595,7 @@ void Server::submit_calc_result(int client_fd,int64 connection_id,int64 number,s
 
         complete_result.client_fd=client_fd;
         complete_result.connection_id=connection_id;
-        complete_result.response="Result: "+to_string(result)+"\n";
+        complete_result.response="RESULT: "+to_string(result)+"\n";
 
         {
             lock_guard<mutex> lock(result_mutex);

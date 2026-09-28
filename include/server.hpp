@@ -26,7 +26,7 @@ class Server
     Server(short _port,size_t worker_count=4);
     ~Server();
 
-    void initialize();
+    bool initialize();
     void run(size_t timeout_ms);
 
     private:
