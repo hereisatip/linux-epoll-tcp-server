@@ -1,7 +1,0 @@
-{
-	"InstallScripts" : 
-	[
-		"/home/curry/linux-learning/epoll_server_rewrite/build/cmake_install.cmake"
-	],
-	"Parallel" : false
-}

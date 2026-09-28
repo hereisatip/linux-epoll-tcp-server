@@ -1,1 +1,0 @@
-/usr/bin/g++ -g -Wl,--dependency-file=CMakeFiles/protocol_test.dir/link.d CMakeFiles/protocol_test.dir/src/protocol.cpp.o CMakeFiles/protocol_test.dir/tests/protocol_test.cpp.o -o protocol_test

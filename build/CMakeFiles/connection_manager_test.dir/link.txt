@@ -1,1 +1,0 @@
-/usr/bin/g++ -g -Wl,--dependency-file=CMakeFiles/connection_manager_test.dir/link.d CMakeFiles/connection_manager_test.dir/src/connection_manager.cpp.o CMakeFiles/connection_manager_test.dir/tests/connection_manager_test.cpp.o -o connection_manager_test
